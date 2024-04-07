@@ -1,8 +1,8 @@
 Comprog school project ...
 
-It is a simple program that prompts the user various elementary level math questions for the purpose of improving mental math skill
+It is a simple program that prompts the user with various elementary-level math questions to improve mental math solving skills
 
-It has a simple rpg minigame within
+It has a simple RPG minigame within
 
 Make sure the classes.py are in the same folder with the arithmetictrainer.py
 
