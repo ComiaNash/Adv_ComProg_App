@@ -152,7 +152,7 @@ def question_generator(operation, set_size):
             end_time = time.time()
             elapsed_time = end_time - start_time
 
-            # Checking if answer is correct
+            # Checking if the answer is correct
 
             if elapsed_time < time_limit:
                 
@@ -181,7 +181,7 @@ def question_generator(operation, set_size):
 
     print(f"Correct answers: {correct_marks} Wrong answers: {wrong_marks}  ")
     
-    # Prevents pop-up when function qustion generator is called in the arithmetic mini game
+    # Prevents pop-up when function question generator is called in the arithmetic mini-game
     if set_size == 1:
         pass
 
@@ -216,7 +216,7 @@ def divide(number1, number2):
 def main_interface():
      while True:
         try:
-            slow_print("******** Welcome to the Arithmetic Ace RPG mini game! ********")
+            slow_print("******** Welcome to the Arithmetic Ace RPG mini-game! ********")
             slow_print("Available classes:")
             print("\t1. Warrior")
             print("\t2. Mage")
@@ -249,7 +249,7 @@ def main_interface():
 
             elif user_choice =='3':
                 slow_print("You have chosen Archer...")
-                slow_print("Archer is a skilled marksmen proficient in ranged combat.  \n Attributes: ")
+                slow_print("Archer is a skilled marksman proficient in ranged combat.  \n Attributes: ")
                 print("\tStrength: Moderate")
                 print("\tDexterity: High")
                 print("\tIntelligence: Moderate")
