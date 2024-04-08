@@ -25,7 +25,7 @@ class Hero():
             
     def hero_cast_skill(self, opponent):
         damage = self.intelligence * random.uniform( 1.25, 3) 
-        slow_print(f"{self.name} used a skill inlficting {int(damage)} points of damage to {opponent.name}")
+        slow_print(f"{self.name} used a skill inflicting {int(damage)} points of damage to {opponent.name}")
         opponent.hp -= damage
 
 class Warrior(Hero):
@@ -38,7 +38,7 @@ class Mage(Hero):
 
 class Archer(Hero):
     def __init__ (self, name):
-        super().__init__(name, hero_class= 'Hero',hp= 100, strength = 10, dexterity = 20, intelligence= 12)
+        super().__init__(name, hero_class= 'Archer',hp= 100, strength = 10, dexterity = 20, intelligence= 12)
 
     
 
@@ -55,7 +55,7 @@ class Monster():
 
     def is_alive(self):
         if self.hp <= 0:
-            slow_print(f"{self.name} has been slained")
+            slow_print(f"{self.name} has been slayed")
     
 def slow_print(text, delay=0.03):
     for char in text:
