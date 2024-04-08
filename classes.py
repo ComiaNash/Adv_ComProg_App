@@ -11,7 +11,7 @@ class Hero():
             self.hp = hp
 
     def hero_attack(self, opponent):
-        damage = self.strength * 100
+        damage = self.strength * random.randint(0.75, 1.50)
         slow_print(f"{self.name} attacks and inflicted {int(damage)} points of damage to {opponent.name}")
         opponent.hp -= damage
 
