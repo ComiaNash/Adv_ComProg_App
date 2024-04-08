@@ -1,4 +1,5 @@
 import random
+import time
 class Hero():
     def __init__(self, name, hero_class, strength, dexterity, intelligence, hp):
 
@@ -10,21 +11,21 @@ class Hero():
             self.hp = hp
 
     def hero_attack(self, opponent):
-        damage = self.strength * random.randint(0.75, 1.50)
-        print(f"{self.name} attacks and inflicted {int(damage)} points of damage to {opponent.name}")
+        damage = self.strength * 100
+        slow_print(f"{self.name} attacks and inflicted {int(damage)} points of damage to {opponent.name}")
         opponent.hp -= damage
 
     def hero_evade(self, opponent):
-        negation = self.dexterity * self.strength * self.intelligence * random.uniform(0.010, 0.020)
-        if negation < 18:
-            print(f"{self.name} blocked the attack of {opponent.name}!")
+        negation = self.dexterity * self.strength * self.intelligence * random.uniform(0.008, 0.020)
+        if negation < 16:
+            slow_print(f"{self.name} blocked the attack of {opponent.name}!")
         else:
-            print(f"{self.name} failed to block the attack of {opponent.name} and took {int(opponent.strength)} points of damage")
+            slow_print(f"{self.name} failed to block the attack of {opponent.name} and took {int(opponent.strength)} points of damage")
             self.hp -= opponent.strength  
             
     def hero_cast_skill(self, opponent):
         damage = self.intelligence * random.uniform( 1.25, 3) 
-        print(f"{self.name} used a skill inlficting {int(damage)} points of damage to {opponent.name}")
+        slow_print(f"{self.name} used a skill inlficting {int(damage)} points of damage to {opponent.name}")
         opponent.hp -= damage
 
 class Warrior(Hero):
@@ -49,14 +50,18 @@ class Monster():
 
     def monster_attack(self, opponent):
         damage = self.strength * random.uniform(0.75, 1.25)
-        print(f"{self.name} attacks {opponent.name} inflicting {int(damage)} points of damage!")
+        slow_print(f"{self.name} attacks {opponent.name} inflicting {int(damage)} points of damage!")
         opponent.hp -= damage
 
     def is_alive(self):
         if self.hp <= 0:
-            print(f"{self.name} has been slained")
+            slow_print(f"{self.name} has been slained")
     
-
+def slow_print(text, delay=0.03):
+    for char in text:
+        print(char, end='', flush=True)
+        time.sleep(delay)
+    print()
 
 
     
