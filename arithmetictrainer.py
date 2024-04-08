@@ -519,11 +519,11 @@ def display_player_inventory(player, user_choice ):
         slow_print(f"Gold: {user_inventory[player]['Gold']}")
 
         if user_choice =='1':
-            print("Class: Warrior")
+            print(f"Class: {player.hero_class}")
         if user_choice =='2':
-            print("Class: Mage")
+            print(f"Class: {player.hero_class}")
         if user_choice =='3':
-            print("Class: Archer")
+            print(f"Class: {player.hero_class}")
         print(42*"*")
 
         take_inventory(player)
